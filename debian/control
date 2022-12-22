@@ -1,0 +1,45 @@
+Source: parsedatetime
+Maintainer: Debian Python Team <team+python@tracker.debian.org>
+Uploaders: Bernd Zeimetz <bzed@debian.org>
+Section: python
+Priority: optional
+Build-Depends: debhelper-compat (= 12),
+               dh-python,
+               python3-all,
+               python3-pytest <!nocheck>,
+               python3-pytest-runner <!nocheck>,
+               python3-setuptools
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/python-team/packages/parsedatetime
+Vcs-Git: https://salsa.debian.org/python-team/packages/parsedatetime.git
+Homepage: https://github.com/bear/parsedatetime
+Rules-Requires-Root: no
+
+Package: python3-parsedatetime
+Architecture: all
+Depends: ${misc:Depends},
+         ${python3:Depends}
+Recommends: python3-icu
+Description: Python 3 module to parse human-readable date/time expressions
+ parsedatetime is able to parse, for example, the following:
+ .
+   * August 25th, 2008
+   * 25 Aug 2008
+   * Aug 25 5pm
+   * 5pm August 25
+   * next saturday
+   * tomorrow
+   * next thursday at 4pm
+   * at 4pm
+   * eod
+   * tomorrow eod
+   * eod tuesday
+   * eoy
+   * eom
+   * in 5 minutes
+   * 5 minutes from now
+   * 5 hours before now
+   * 2 hours before noon
+   * 2 days from tomorrow
+ .
+ This package provides the modules for Python 3.
